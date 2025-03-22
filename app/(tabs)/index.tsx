@@ -1,6 +1,5 @@
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Image } from 'expo-image';
-import TestBienestar from '../../assets/images/testBienestar.svg';
 import ViewInset from '@/components/ViewInset';
 import { Link } from "expo-router";
 import AnimationTest from "../../assets/images/animationtest.gif"
@@ -15,12 +14,11 @@ export default function Home() {
 
       <View className='flex-row bg-sky-100 rounded-xl'>
         <View className='flex-col-reverse'>
-            {/* <TestBienestar classNam style={{ width: 100, height: 100 }}/> */}
             <Image source={AnimationTest} style={{ width: 200, height: 200 }} />
         </View>
         <View className="flex-1 flex-wrap ml-2 items-start py-4">
           <Text className="text-2xl font-bold text-sky-900">
-            Test de Bienestar
+            Test de Bienestar Mensual
           </Text>
           <Text className="text-lg text-sky-900">
             Conoce en qué punto se encuentra tu salud emocional

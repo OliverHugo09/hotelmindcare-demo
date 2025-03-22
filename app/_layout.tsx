@@ -48,6 +48,12 @@ export default function RootLayout() {
         <Stack.Screen name="testBienestar/bienestar1" options={{ title: 'Test de Bienestar', }} />
         <Stack.Screen name="testBienestar/bienestar2" options={{ title: 'Test de Bienestar', }} />
         <Stack.Screen name="testBienestar/bienestar3" options={{ title: 'Test de Bienestar', }} />
+        <Stack.Screen name="testBienestar/bienestar4" options={{ title: 'Test de Bienestar', }} />
+        <Stack.Screen name="testBienestar/bienestar5" options={{ title: 'Test de Bienestar', }} />
+        <Stack.Screen name="testBienestar/bienestar6" options={{ title: 'Test de Bienestar', }} />
+        <Stack.Screen name="testBienestar/bienestar7" options={{ title: 'Test de Bienestar', }} />
+        <Stack.Screen name="testBienestar/bienestar8" options={{ title: 'Test de Bienestar', }} />
+        <Stack.Screen name="testBienestar/bienestar9" options={{ title: 'Test de Bienestar', }} />
         {/* Pantallas de apoyo */}
         <Stack.Screen name="+not-found" />
         {/* Pantalla principal */}

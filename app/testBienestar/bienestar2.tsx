@@ -11,7 +11,7 @@ import {
     return (
       <ViewInset className="flex-1 bg-sky-600">
           <View>
-              <Text className="text-xl font-medium text-center text-white">A continuación, se le presentará una serie de anunciados donde usted deberá responder a lo que considere, por medio de un puntaje del 1 al 6, donde 6 es muy de acuerdo y el 1 es nada de acuerdo.</Text>
+              <Text className="text-xl font-medium text-center text-white">Por favor, seleccione una opción marcando el círculo que mejor refleje su opinión, usando una escala del 1 al 6, donde 1 significa "nada de acuerdo" y 6 significa "muy de acuerdo"</Text>
           </View>
           <View className="mt-10 w-[150px] h-[2px] bg-white my-4 self-center" />
           <View className="mt-10">

@@ -16,14 +16,14 @@ import {
     { id: 6, label: "Muy de acuerdo", color: "bg-pink-400 border-pink-600" },
   ];
   
-  export default function BienestarPage3() {
+  export default function BienestarPage9() {
 
     const [selected, setSelected] = useState<number | null>(null);
   
     return (
       <ViewInset className="flex-1 bg-sky-600">
           <View>
-              <Text className="text-xl font-medium text-center text-white">1. Cuando repaso la historia de mi vida estoy contento con cómo han resultado las cosas</Text>
+              <Text className="text-xl font-medium text-center text-white">7. En general, me siento seguro y positivo conmigo mismo</Text>
           </View>
           <View className="mt-10 w-[150px] h-[2px] bg-white my-4 self-center" />
 
@@ -48,7 +48,7 @@ import {
                  </View>
             </View>       
 
-          <Link className="mb-10" href="/testBienestar/bienestar4" asChild>
+          <Link className="mb-10" href="/testBienestar/bienestar9" asChild>
             <TouchableOpacity className="bg-gray-800 p-4 rounded-lg items-center">
                 <Text className="text-white font-medium text-lg dark:text-white">Siguiente</Text>
             </TouchableOpacity>
