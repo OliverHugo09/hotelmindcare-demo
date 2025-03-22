@@ -15,8 +15,7 @@ const ViewInset = ({ children, style, ...rest }: ViewInsetProps) => {
         {
           paddingTop: insets.top,
           paddingBottom: insets.bottom,
-          paddingLeft: insets.left,
-          paddingRight: insets.right
+          paddingHorizontal: 16,
           // Otros estilos que desees aplicar
         },
         style,

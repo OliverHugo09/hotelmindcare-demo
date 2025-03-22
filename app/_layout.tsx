@@ -6,7 +6,6 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Tabs } from 'expo-router';
 import "../global.css"
 
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -45,6 +44,11 @@ export default function RootLayout() {
         <Stack.Screen name="registro/registro3" options={{ headerShown: false }} />
         <Stack.Screen name="login/login" options={{ headerShown: false }} />
         <Stack.Screen name="resetPassword/resetPassword" options={{ headerShown: false }} />
+        {/* Pantallas test bienestar */}
+        <Stack.Screen name="testBienestar/bienestar1" options={{ title: 'Test de Bienestar', }} />
+        <Stack.Screen name="testBienestar/bienestar2" options={{ title: 'Test de Bienestar', }} />
+        <Stack.Screen name="testBienestar/bienestar3" options={{ title: 'Test de Bienestar', }} />
+        {/* Pantallas de apoyo */}
         <Stack.Screen name="+not-found" />
         {/* Pantalla principal */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
