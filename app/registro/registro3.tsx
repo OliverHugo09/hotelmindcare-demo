@@ -2,19 +2,24 @@ import React, { useState } from "react";
 import {
   View,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  Modal,
+  ScrollView,
 } from "react-native";
 import { Link } from "expo-router";
 import ViewInset from '@/components/ViewInset';
 import { Image } from 'react-native';
 import Logo from '@/assets/images/logo.png';
 import { Picker } from '@react-native-picker/picker';
+import { termsUseData } from '@/constants/termsUse';
+import { privacyUseData } from '@/constants/privacityTerms';
 
 export default function Registro3() {
 
-  const [selectedSex, setSelectedSex] = useState('');
-  const [selectedGender, setSelectedGender] = useState('');
-  const [selectedCivil, setSelectedCivil] = useState('');
+    const [selectedSex, setSelectedSex] = useState('');
+    const [selectedGender, setSelectedGender] = useState('');
+    const [selectedCivil, setSelectedCivil] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <ViewInset className="flex-1 mx-4">
@@ -62,11 +67,55 @@ export default function Registro3() {
             <Picker.Item label="Union libre" value="opcion4" />
             </Picker>
         </View>
-        <Link className="mt-10" href="/" asChild>
-            <TouchableOpacity className="bg-gray-800 p-4 rounded-lg items-center">
-                <Text className="text-white font-medium text-lg">Registrar</Text>
-            </TouchableOpacity>
-        </Link>
+
+      {/* Modal de Términos y Condiciones */}
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => setModalVisible(false)}
+      >
+        <View className="flex-1 justify-center items-center bg-black bg-opacity-50">
+          <View className="w-3/4 bg-white p-2 rounded">
+            <Text className="text-lg font-bold">Términos y Política de Privacidad</Text>
+            <Text className="mt-2">App de Terapia Psicológica HOTEL MINDCARE</Text>
+            <View className="flex-row mt-3 h-[50vh]">
+            <ScrollView>
+            <Text className="font-bold mb-1">Términos de Uso</Text>
+            {termsUseData.map((item) => (
+                <View key={item.id} style={{ marginBottom: 10 }}>
+                <Text style={{ fontWeight: 'bold' }}>{item.title}</Text>
+                <Text>{item.description}</Text>
+                </View>
+                ))}
+            <Text className="font-bold mb-1">Política de Privacidad</Text>
+            {privacyUseData.map((item) => (
+                <View key={item.id} style={{ marginBottom: 10 }}>
+                <Text style={{ fontWeight: 'bold' }}>{item.title}</Text>
+                <Text>{item.description}</Text>
+                </View>
+                ))}
+            </ScrollView>
+            </View>
+            <Link href="/login/login" asChild>
+                <TouchableOpacity
+                className='mt-10 p-4 rounded-lg items-center bg-gray-800'
+                >
+                <Text className="text-white font-medium text-lg">Acepto los terminos y condiciones</Text>
+                </TouchableOpacity>
+            </Link>
+          </View>
+        </View>
+      </Modal>
+      
+      {/* Botón de Registro */}
+      <TouchableOpacity
+        className='mt-10 p-4 rounded-lg items-center bg-gray-800'
+        onPress={() => setModalVisible(true)}
+        >
+        <Text className="text-white font-medium text-lg">Registrar</Text>
+      </TouchableOpacity>
+
     </ViewInset>
   );
 }

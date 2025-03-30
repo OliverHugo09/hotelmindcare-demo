@@ -34,7 +34,7 @@ export default function TabLayout() {
   return (
     <SafeAreaProvider>
         <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-            <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+            <Tabs screenOptions={{ tabBarActiveTintColor: '#0084D1' }}>
                 <Tabs.Screen
                     name="index"
                     options={{

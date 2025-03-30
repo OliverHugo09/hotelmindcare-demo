@@ -54,6 +54,11 @@ export default function RootLayout() {
         <Stack.Screen name="testBienestar/bienestar7" options={{ title: 'Test de Bienestar', }} />
         <Stack.Screen name="testBienestar/bienestar8" options={{ title: 'Test de Bienestar', }} />
         <Stack.Screen name="testBienestar/bienestar9" options={{ title: 'Test de Bienestar', }} />
+
+        {/* Pantallas test Laboral estres */}
+        <Stack.Screen name="testEstresLaboral/test1" options={{ title: '', }} />
+        {/* Pantallas test Laboral estres */}
+        <Stack.Screen name="emojiCalendar/emojiCalendar" options={{ title: '', }} />
         {/* Pantallas de apoyo */}
         <Stack.Screen name="+not-found" />
         {/* Pantalla principal */}
